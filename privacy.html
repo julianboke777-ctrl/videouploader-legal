@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Video Uploader</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; max-width: 760px; margin: 3em auto; padding: 0 1em; color: #1f2937; line-height: 1.6; }
+  h1 { color: #1e40af; }
+  h2 { color: #374151; margin-top: 1.6em; }
+  a { color: #2563eb; }
+  small { color: #6b7280; }
+  table { border-collapse: collapse; margin: 1em 0; }
+  th, td { border: 1px solid #d1d5db; padding: 0.5em 0.75em; text-align: left; }
+  th { background: #f3f4f6; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy — Video Uploader</h1>
+<p><small>Effective date: 2026-05-07</small></p>
+
+<h2>1. Overview</h2>
+<p>Video Uploader (the "Application") is a single-developer automation tool used exclusively by its operator to publish self-produced video content to TikTok creator channels owned and operated by the operator. This Privacy Policy describes the limited personal data the Application processes.</p>
+
+<h2>2. Data Controller</h2>
+<p>The Application is operated by a single individual developer (the "Operator"), residing in Germany. For data-protection inquiries, contact the Operator via the email address registered with the application's TikTok for Developers account.</p>
+
+<h2>3. Data Collected and Processed</h2>
+<table>
+  <thead><tr><th>Data category</th><th>Source</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td>OAuth access_token</td><td>TikTok Login Kit (Authorization Code Flow)</td><td>Authentication to the TikTok Content Posting API</td></tr>
+    <tr><td>OAuth refresh_token</td><td>TikTok Login Kit</td><td>Renewing the access token after expiry</td></tr>
+    <tr><td>TikTok open_id (pseudonymous user identifier)</td><td>TikTok Login Kit</td><td>Mapping the token to the correct creator account</td></tr>
+    <tr><td>Video file (self-produced by the Operator)</td><td>Local file system</td><td>Upload via the TikTok API</td></tr>
+    <tr><td>Caption text (authored by the Operator)</td><td>Local file system</td><td>Submitted with the video</td></tr>
+  </tbody>
+</table>
+<p>The Application does <strong>not</strong> process: data of other TikTok users, analytics or performance data, IP addresses, location data, or device identifiers.</p>
+
+<h2>4. Legal Basis (GDPR)</h2>
+<p>Processing is performed under Art. 6(1)(b) GDPR (performance of a contract — the Operator authorizes upload via the OAuth flow) supplemented by Art. 6(1)(a) GDPR (consent given through OAuth authorization).</p>
+
+<h2>5. Storage Location and Retention</h2>
+<p>OAuth tokens are stored exclusively locally on the Operator's machine in a file with permission <code>0600</code>. No tokens are stored on any server, cloud service, or third-party processor (other than the TikTok API itself).</p>
+<ul>
+  <li>Access token: up to 24 hours from issuance (per TikTok's specification)</li>
+  <li>Refresh token: up to 365 days from issuance, or until manual revocation</li>
+</ul>
+
+<h2>6. Recipients</h2>
+<p>The sole external recipient of data transmitted via the Application is <strong>TikTok Technology Limited</strong> (Dublin, Ireland) and, where applicable, affiliated entities of the ByteDance group, in accordance with <a href="https://www.tiktok.com/legal/privacy-policy">TikTok's own privacy policy</a>.</p>
+
+<h2>7. International Transfers</h2>
+<p>To the extent TikTok itself transfers data to servers outside the European Economic Area, those transfers are governed by EU Standard Contractual Clauses pursuant to Art. 46(2)(c) GDPR. The Operator does not himself initiate such transfers.</p>
+
+<h2>8. Data Subject Rights</h2>
+<p>The Operator is the only data subject and has full control over the locally-stored tokens, which can be deleted at any time. OAuth authorization can additionally be revoked directly in the TikTok app: <em>Settings → Privacy → Manage apps and websites → Video Uploader → Remove access.</em></p>
+<p>Standard rights under Articles 15-22 GDPR apply. Complaints may be lodged with the supervisory authority of the Operator's federal state (a list is available at <a href="https://www.bfdi.bund.de/anschriften">bfdi.bund.de/anschriften</a>).</p>
+
+<h2>9. Automated Decision-Making</h2>
+<p>No automated decision-making within the meaning of Art. 22 GDPR and no profiling are performed.</p>
+
+<h2>10. Changes</h2>
+<p>This Privacy Policy may be updated to reflect changes in the Application's behavior or applicable law. The current version is the authoritative one.</p>
+
+<p style="margin-top:3em"><a href="index.html">← Back</a></p>
+</body>
+</html>
