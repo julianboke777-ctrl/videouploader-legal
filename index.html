@@ -3,21 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video Uploader — Legal</title>
+<title>Video Uploader — Self-Publishing Automation for TikTok Creators</title>
+<meta name="description" content="Video Uploader is a single-developer desktop automation tool that publishes self-produced video content to TikTok creator channels owned and operated by the developer, using the official TikTok Content Posting API (Direct Post).">
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; max-width: 720px; margin: 4em auto; padding: 0 1em; color: #1f2937; line-height: 1.6; }
-  h1 { color: #1e40af; }
-  a { color: #2563eb; text-decoration: none; }
+  :root {
+    --ink: #1f2937;
+    --ink-soft: #4b5563;
+    --muted: #6b7280;
+    --rule: #e5e7eb;
+    --accent: #1e40af;
+    --accent-soft: #2563eb;
+    --card: #f9fafb;
+    --code-bg: #f3f4f6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 2.5em 1.25em 4em;
+    color: var(--ink);
+    line-height: 1.65;
+    background: #fff;
+  }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 1.6em; margin-bottom: 2.4em; }
+  header .eyebrow { color: var(--muted); font-size: 0.85em; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 0.4em; }
+  h1 { color: var(--accent); margin: 0 0 0.3em; font-size: 2.1em; line-height: 1.2; }
+  h2 { color: var(--ink); margin: 2.4em 0 0.6em; font-size: 1.4em; border-left: 3px solid var(--accent); padding-left: 0.6em; }
+  h3 { color: var(--ink); margin: 1.6em 0 0.4em; font-size: 1.1em; }
+  p { margin: 0.6em 0; color: var(--ink-soft); }
+  a { color: var(--accent-soft); text-decoration: none; }
   a:hover { text-decoration: underline; }
-  ul { padding-left: 1.2em; }
+  ul, ol { padding-left: 1.4em; color: var(--ink-soft); }
+  li { margin: 0.3em 0; }
+  code { background: var(--code-bg); padding: 0.12em 0.4em; border-radius: 3px; font-size: 0.92em; font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+  pre { background: var(--code-bg); padding: 1em; border-radius: 6px; overflow-x: auto; font-size: 0.88em; line-height: 1.5; }
+  pre code { background: transparent; padding: 0; }
+  .lede { font-size: 1.1em; color: var(--ink); margin: 0.4em 0 0; }
+  .card { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 1.1em 1.3em; margin: 1em 0; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1em; margin: 1em 0; }
+  @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+  .grid .card { margin: 0; }
+  .grid .card h3 { margin-top: 0; }
+  .pill { display: inline-block; background: #eff6ff; color: var(--accent); border: 1px solid #dbeafe; padding: 0.15em 0.65em; border-radius: 999px; font-size: 0.85em; margin-right: 0.4em; }
+  .step { display: grid; grid-template-columns: 2em 1fr; gap: 0.6em; margin: 0.9em 0; }
+  .step .n { background: var(--accent); color: #fff; border-radius: 50%; width: 1.8em; height: 1.8em; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.9em; }
+  .step .body { padding-top: 0.1em; }
+  .step .body strong { color: var(--ink); }
+  footer { border-top: 1px solid var(--rule); margin-top: 4em; padding-top: 1.4em; color: var(--muted); font-size: 0.9em; display: flex; flex-wrap: wrap; gap: 1em 1.6em; justify-content: space-between; }
+  footer a { color: var(--ink-soft); }
+  .meta { color: var(--muted); font-size: 0.88em; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.95em; }
+  th, td { text-align: left; padding: 0.55em 0.7em; border-bottom: 1px solid var(--rule); }
+  th { color: var(--ink); font-weight: 600; background: var(--card); }
+  td code { font-size: 0.9em; }
+  .faq dt { font-weight: 600; color: var(--ink); margin-top: 1.1em; }
+  .faq dd { margin: 0.25em 0 0; padding-left: 0; color: var(--ink-soft); }
 </style>
 </head>
 <body>
-<h1>Video Uploader — Legal Documents</h1>
-<p>A single-developer automation tool for publishing self-produced video content to TikTok creator channels owned and operated by the developer.</p>
+
+<header>
+  <p class="eyebrow">Desktop &middot; Single-Developer Tool</p>
+  <h1>Video Uploader</h1>
+  <p class="lede">A desktop automation tool that publishes self-produced video content to TikTok creator channels owned and operated by the developer, using the official TikTok Content Posting API.</p>
+  <p class="meta">Version 1.0 &middot; Updated 2026-05-17</p>
+</header>
+
+<h2>What it is</h2>
+<p>Video Uploader is a small, locally-run desktop application built and operated by a single developer. Its sole purpose is to publish pre-rendered MP4 video files to TikTok creator accounts that the developer owns and operates &mdash; replacing the manual TikTok Studio web upload with a scripted, reproducible workflow.</p>
+<p>There are no end users other than the developer. The tool is not distributed publicly, is not offered as a service, and does not handle any third-party content or accounts.</p>
+
+<div class="card">
+  <h3 style="margin-top:0">In one sentence</h3>
+  <p style="margin-bottom:0">Local script &rarr; OAuth Login Kit &rarr; Content Posting API (Direct Post) &rarr; chunked <code>FILE_UPLOAD</code> &rarr; status poll until <code>PUBLISH_COMPLETE</code>.</p>
+</div>
+
+<h2>Who it&rsquo;s for</h2>
+<p>One audience: the operating developer, publishing to their own creator channel(s). The tool is not multi-tenant, has no user accounts, no UI for external users, and does not expose any network service.</p>
+
+<h2>Key features</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Direct Post via official API</h3>
+    <p>Uses TikTok&rsquo;s Content Posting API (Direct Post) endpoint <code>/v2/post/publish/video/init/</code>. No third-party intermediaries (no Buffer, Hootsuite, Zapier, etc.).</p>
+  </div>
+  <div class="card">
+    <h3>Chunked <code>FILE_UPLOAD</code></h3>
+    <p>Videos are uploaded as chunks via <code>PUT</code> from the developer&rsquo;s local machine. <code>PULL_FROM_URL</code> is intentionally not used.</p>
+  </div>
+  <div class="card">
+    <h3>OAuth via Login Kit</h3>
+    <p>One-time OAuth flow authorizes the developer&rsquo;s own creator account. Scopes: <code>user.info.basic</code> (open_id mapping) and <code>video.publish</code>.</p>
+  </div>
+  <div class="card">
+    <h3>Local-only token storage</h3>
+    <p>Access + refresh tokens are stored in a single file on the developer&rsquo;s machine with file permission <code>0600</code>. Refresh tokens are rotated on every refresh, per TikTok&rsquo;s specification.</p>
+  </div>
+  <div class="card">
+    <h3>Low cadence by design</h3>
+    <p>Typical posting rate is 1&ndash;2 videos per day, per channel. No bulk posting, no batched flooding, no scheduled spam.</p>
+  </div>
+  <div class="card">
+    <h3>No analytics scraping</h3>
+    <p>The tool does not read user data, follower lists, comments, or analytics. The only API surface used is video publishing + the minimum OAuth identity scope.</p>
+  </div>
+</div>
+
+<h2>How it works</h2>
+<div class="step"><div class="n">1</div><div class="body"><strong>Local rendering.</strong> The developer produces a 60-second portrait MP4 locally (H.264, 1080&times;1920, 25&nbsp;fps). The tool does not generate or modify video content.</div></div>
+<div class="step"><div class="n">2</div><div class="body"><strong>One-time OAuth.</strong> The developer runs <code>oauth_bootstrap.py</code>, which opens the TikTok authorization page in the default browser. After clicking <em>Allow</em>, an access token and refresh token are written to a 0600-permissioned file at <code>~/.claude/.config/tiktok-tokens.json</code>.</div></div>
+<div class="step"><div class="n">3</div><div class="body"><strong>Init upload.</strong> The tool calls <code>/v2/post/publish/video/init/</code> with <code>source=FILE_UPLOAD</code>, providing the file size, chunk size, and total chunk count. TikTok returns a <code>publish_id</code> and an <code>upload_url</code>.</div></div>
+<div class="step"><div class="n">4</div><div class="body"><strong>Chunked PUT.</strong> The tool uploads each chunk to <code>upload_url</code> via standard HTTP <code>PUT</code> with the correct <code>Content-Range</code> headers. Files under 5&nbsp;MB use a single chunk.</div></div>
+<div class="step"><div class="n">5</div><div class="body"><strong>Status poll.</strong> The tool polls <code>/v2/post/publish/status/fetch/</code> until status becomes <code>PUBLISH_COMPLETE</code> (or fails with a documented error code, which the tool surfaces unmodified).</div></div>
+<div class="step"><div class="n">6</div><div class="body"><strong>Refresh rotation.</strong> When the access token expires (24&nbsp;h TTL), the tool exchanges the refresh token for a new access token <em>and</em> a new refresh token, persisting both back to the 0600 file. No re-authorization is required.</div></div>
+
+<h2>Specifications</h2>
+<table>
+  <tr><th>Platform</th><td>Desktop (macOS); Python 3.13 + standard library + <code>requests</code></td></tr>
+  <tr><th>Distribution</th><td>Not distributed. Single private install on the developer&rsquo;s machine.</td></tr>
+  <tr><th>Network surface</th><td>Outbound HTTPS only, to <code>open.tiktokapis.com</code> and TikTok&rsquo;s upload CDN. No inbound listener except the OAuth loopback redirect <code>http://localhost:53219/callback/</code> during the one-time auth flow.</td></tr>
+  <tr><th>API products used</th><td><span class="pill">Login Kit</span><span class="pill">Content Posting API (Direct Post)</span></td></tr>
+  <tr><th>Scopes requested</th><td><code>user.info.basic</code>, <code>video.publish</code></td></tr>
+  <tr><th>File constraints</th><td>MP4 / WebM / MOV; H.264, H.265, VP8, VP9; 23&ndash;60&nbsp;fps; 360&ndash;4096&nbsp;px; &le;&nbsp;10&nbsp;min; &le;&nbsp;4&nbsp;GB</td></tr>
+  <tr><th>Posting cadence</th><td>1&ndash;2 videos per day per channel (operator-controlled)</td></tr>
+</table>
+
+<h2>Privacy &amp; security posture</h2>
+<ul>
+  <li><strong>No data collection.</strong> The tool does not log, store, or transmit user data beyond what is strictly required to publish a video (the video file itself, a caption, and the requested <code>privacy_level</code>).</li>
+  <li><strong>No third-party services.</strong> The integration is direct: the developer&rsquo;s machine talks to <code>open.tiktokapis.com</code> over HTTPS. No middleware, no analytics SDKs, no telemetry.</li>
+  <li><strong>Local-only credentials.</strong> Client Key, Client Secret, access tokens, and refresh tokens never leave the developer&rsquo;s machine. All credential files are mode <code>0600</code> (owner read/write only).</li>
+  <li><strong>Refresh rotation enforced.</strong> Every successful refresh returns a new refresh token, which is persisted immediately. Failure to rotate would lock the tool out, by design.</li>
+  <li><strong>Token revocation.</strong> The developer can revoke access at any time from TikTok&rsquo;s account settings &rarr; <em>Privacy &rarr; Manage apps and websites &rarr; Video Uploader &rarr; Remove access.</em></li>
+</ul>
+
+<h2>Use-case summary for review</h2>
+<div class="card">
+  <p>Single-developer, single-purpose automation for owner-operated creator channels. The application uploads self-produced 60-second portrait videos to creator accounts owned by the developer at a cadence of 1&ndash;2 videos per day per channel.</p>
+  <p>Each upload is initiated explicitly by the developer through the local script. The application calls <code>/v2/post/publish/video/init/</code> with <code>FILE_UPLOAD</code> source, uploads the video chunks via <code>PUT</code> to the returned <code>upload_url</code>, then polls <code>/v2/post/publish/status/fetch/</code> until <code>PUBLISH_COMPLETE</code>.</p>
+  <p>OAuth tokens (access + refresh) are stored locally with file permission <code>0600</code>. Refresh tokens are rotated on every refresh as required by the spec. The application does not store user data, does not collect analytics, and does not interact with any TikTok user other than the authenticated creator account.</p>
+  <p style="margin-bottom:0">The application does not use third-party services (Buffer, Hootsuite, etc.) &mdash; it is a direct integration via the official Content Posting API.</p>
+</div>
+
+<h2>FAQ</h2>
+<dl class="faq">
+  <dt>Is this app available to download?</dt>
+  <dd>No. It is a private, single-developer tool. There is no public release, no installer, and no website signup.</dd>
+
+  <dt>Does it post to other people&rsquo;s accounts?</dt>
+  <dd>No. It posts only to creator accounts owned and operated by the developer, authorized via a one-time explicit OAuth flow.</dd>
+
+  <dt>Does it use <code>PULL_FROM_URL</code>?</dt>
+  <dd>No. Only <code>FILE_UPLOAD</code> is used, with the video uploaded as chunks via <code>PUT</code> from the developer&rsquo;s machine. <code>PULL_FROM_URL</code> would require domain verification of an external host, which is intentionally avoided.</dd>
+
+  <dt>What happens if the API returns an error?</dt>
+  <dd>The script surfaces TikTok&rsquo;s documented error response unmodified and exits with a non-zero status. No retry storm, no silent swallow.</dd>
+
+  <dt>How are tokens stored?</dt>
+  <dd>In a single JSON file on the developer&rsquo;s local disk, with POSIX mode <code>0600</code> (owner read/write only). Never sent anywhere except back to TikTok&rsquo;s token endpoint during refresh.</dd>
+
+  <dt>Why Desktop platform and not Web?</dt>
+  <dd>The tool is a local script. There is no hosted web frontend, no inbound network service, and no UI exposed to remote users. Desktop is the accurate platform classification.</dd>
+
+  <dt>How is the integration audited?</dt>
+  <dd>The endpoints used, scopes requested, and file-handling behavior are documented in full on this page and in the privacy policy. The integration is direct (no third-party SaaS in the path).</dd>
+</dl>
+
+<h2>Legal</h2>
 <ul>
   <li><a href="terms.html">Terms of Service</a></li>
   <li><a href="privacy.html">Privacy Policy</a></li>
 </ul>
+
+<h2>Contact</h2>
+<p>For inquiries related to this application or its API integration, please open an issue on the public repository:</p>
+<p><a href="https://github.com/julianboke777-ctrl/videouploader-legal/issues">github.com/julianboke777-ctrl/videouploader-legal/issues</a></p>
+
+<footer>
+  <span>&copy; 2026 Video Uploader</span>
+  <span><a href="terms.html">Terms</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="https://github.com/julianboke777-ctrl/videouploader-legal/issues">Contact</a></span>
+</footer>
+
 </body>
 </html>
